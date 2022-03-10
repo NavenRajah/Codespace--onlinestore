@@ -17,17 +17,11 @@
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/headers/">
-
-
 </head>
 
 <body>
-    <div id="app">
+    <div>
         <nav class="navbar navbar-expand-lg navbar-info bg-info">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">ONLINESALE.COM</a>
@@ -99,125 +93,156 @@
 
     <div class="bg-light text-secondary px-4 py-5 text-center">
         <div class="py-5">
-          <h1 class="display-5 fw-bold text-dark">Dark mode hero</h1>
-          <div class="col-lg-6 mx-auto">
-            <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button>
-              <button type="button" class="btn btn-outline-info btn-lg px-4">Secondary</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <!--Product cards-->
-<div class="container px-4 py-5">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+            <h1 class="display-5 fw-bold text-dark">Dark mode hero</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                    world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive
+                    grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom
+                        button</button>
+                    <button type="button" class="btn btn-outline-info btn-lg px-4">Secondary</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--Footer-->
+    <!--Product cards-->
+    <div id="app" class="container">
+        <div class="text-right"><button class="btn btn-primary" data-toggle="modal" data-target="#cartModal">Cart
+                ({{totalItems}})</button></div>
 
-<div class="container">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-  
-        <div class="col-4 offset-1">
-          <form>
-            <h5>Subscribe to our newsletter</h5>
-            <p>Monthly digest of whats new and exciting from us.</p>
-            <div class="d-flex w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-              <button class="btn btn-primary" type="button">Subscribe</button>
+        <!-- Modal -->
+        <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Cart</h4>
+                    </div>
+                    <div class="modal-body">
+                        <shopping-cart inline-template :items="cartItems">
+                            <div>
+                                <table class="table table-cart">
+                                    <tr v-for="(item, index) in items">
+                                        <td>{{item.title}}</td>
+                                        <td style="width:120px">QTY:
+                                            <input v-model="item.qty" class="form-control input-qty" type="number"
+                                                min="1">
+                                        </td>
+                                        <td class="text-right">${{item.price | formatCurrency}}</td>
+                                        <td>
+                                            <button @click="removeItem(index)"><span
+                                                    class="glyphicon glyphicon-trash"></span></button>
+                                        </td>
+                                    </tr>
+                                    <tr v-show="items.length === 0">
+                                        <td colspan="4" class="text-center">Cart is empty</td>
+                                    </tr>
+                                    <tr v-show="items.length > 0">
+                                        <td></td>
+                                        <td class="text-right">Cart Total</td>
+                                        <td class="text-right">${{Total | formatCurrency}}</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- /.container -->
+                        </shopping-cart>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-          </form>
         </div>
-      </div>
-  
-      <div class="d-flex justify-content-between py-4 my-4 border-top">
-        <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-        </ul>
-      </div>
-    </footer>
-    <!-- your content here... -->
-    <script src="./components/main.js"></script>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 text-center" v-for="item in items">
+                    <img class="img-responsive" :src="item.image" alt="">
+                    <h5>{{ item.title }}</h5>
+                    <h6>${{ item.price | formatCurrency }}</h6>
+                    <p class="text-center"><input v-model="item.qty" type="number" class="form-control"
+                            placeholder="Qty" min="1" /></p>
+
+                    <button @click="addToCart(item)" class="btn btn-sm btn-primary">Add to Cart</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <div class="bg-info">
+        <footer class="container py-5">
+            <div class="row">
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-4 offset-1">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of whats new and exciting from us.</p>
+                        <div class="d-flex w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                            <button class="btn btn-outline-dark btn-lg px-4 me-sm-3 fw-bold"
+                                type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#twitter" />
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#instagram" />
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                <use xlink:href="#facebook" />
+                            </svg></a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- your content here... -->
+        <script src="./components/main.js"></script>
 </body>
 
 </html>
