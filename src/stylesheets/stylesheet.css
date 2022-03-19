@@ -11,3 +11,7 @@
   .table-cart > tr > td {
     vertical-align: middle !important;
   }
+
+  .flow-right-nav {
+    display: flex;
+  }
