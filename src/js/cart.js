@@ -9,12 +9,22 @@ const cartApp = new Vue({
     
     // members / variables
     data : {
-        pageTitle : "Cart"
+        pageTitle : "Cart",
+        cartItems : []
+    },
+
+    computed : {
+        
+        cartLength() {
+            return this.cartItems.length
+        }
     },
 
     // methods / functions
     methods : {
-
+        addItem() {
+            this.cartItems.push("Example Item")
+        }
     }
 
 });
