@@ -3,6 +3,7 @@
 <html lang="en">
 
 <!-- Head -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,27 +26,32 @@
 <!-- Head -->
 
 <!-- Body -->
-<body>
+
+<body class="text">
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-info bg-info">
+        <nav class="navbar navbar-expand-lg navbar-info bg-dark text">
             <div class="container-fluid">
-                <img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150" height="75">
+                <img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150"
+                    height="75">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item flow-right-nav">
+                        <li class="nav-item flow-right-nav text">
                             <!-- <a class="nav-link active" aria-current="page" href="./index.html">Home</a> -->
-                            <a class="nav-link active" aria-current="page" href="./src/pages/about.html">About</a>
-                            <a class="nav-link active" aria-current="page" href="./src/pages/gallery.html">Gallery</a>
-                            <a class="nav-link active" aria-current="page" href="./src/pages/shop.html">Shop</a>
-                            <a class="nav-link active" aria-current="page" href="./src/pages/contact.html">Contact</a>
-                            <a class="nav-link active" aria-current="page" href="./src/pages/cart.html">Cart</a>
-                                <button>
-                                    Cart <span id="cartLength"></span>
-                                </button>
+                            <a class="nav-link active text-dark" aria-current="page"
+                                href="./src/pages/about.html">About</a>
+                            <a class="nav-link active text" aria-current="page"
+                                href="./src/pages/gallery.html">Gallery</a>
+                            <a class="nav-link active text" aria-current="page" href="./src/pages/shop.html">Shop</a>
+                            <a class="nav-link active text" aria-current="page"
+                                href="./src/pages/contact.html">Contact</a>
+                            <a class="nav-link active text" aria-current="page" href="./src/pages/cart.html">Cart</a>
+                            <button>
+                                Cart <span id="cartLength"></span>
+                            </button>
                             </a>
                         </li>
                         <!-- <li class="nav-item">
@@ -104,11 +110,14 @@
         </div>
 
         <!--Sub Hero-->
-        <div class="bg-light text-secondary px-4 py-5 text-center">
+        <div class="bg-dark text-light px-4 py-5 text-center">
             <div class="py-5">
-                <h1 class="display-5 fw-bold text-dark">About CLothng Warehouse</h1>
+                <h1 class="display-5 fw-bold text-light">About CLothng Warehouse</h1>
                 <div class="col-lg-6 mx-auto">
-                    <p class="fs-5 mb-4">Based In the heart of KZN, we offer a range of high-end fashion at affordable prices. What began as a bootsale is now a registered and reputable online clothing store that delivers to all major areas in South Africa. With over 50 employees we ensure speedy delivery and great customer service.
+                    <p class="fs-5 mb-4">Based In the heart of KZN, we offer a range of high-end fashion at affordable
+                        prices. What began as a bootsale is now a registered and reputable online clothing store that
+                        delivers to all major areas in South Africa. With over 50 employees we ensure speedy delivery
+                        and great customer service.
                     </p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                         <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Shop Now</button>
@@ -121,29 +130,45 @@
     </div>
 
     <!-- Start of Vue Template -->
-    <div id="app">
-        <div class="container">
-            <h1 class="display-5 fw-bold text-dark bg-light text-secondary px-4 py-5 text-center">Featured Products</h1>
-            <div class="text-right"><button class="btn btn-primary" data-toggle="modal" data-target="#cartModal">Cart
-                    ({{totalItems}})</button></div>
-            <div class="row">
-                <div class="col-xs-3 text-center" v-for="item in items">
-                    <img class="img-responsive" :src="item.image" alt="">
-                    <h5>{{ item.title }}</h5>
-                    <h6>${{ item.price | formatCurrency }}</h6>
-                    <p class="text-center"><input v-model="item.qty" type="number" class="form-control"
-                            placeholder="Qty" min="1" /></p>
+    <div class="row" id="app">
 
-                    <button @click="addToCart(item)" class="btn btn-sm btn-primary">Add to Cart</button>
-                    </p>
-                </div>
+        <div class="py-5">
+            <h1 class="container display-5 fw-bold text-dark text-center">Trending Now</h1>
+            <p class="fs-5 mb-4 text-dark text-center">Our Hottest and Latest fashion this season.</p>
+        </div>
+
+        <div class="container card py-4 my-4 px-4 bg-dark" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{Card title}}</h5>
+                <p class="card-text">{{Description}}</p>
+                <a href="#" class="btn btn-primary">{{add to cart}}</a>
+            </div>
+        </div>
+
+        <div class="container card py-4 my-4 bg-dark px-4" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{Card title}}</h5>
+                <p class="card-text">{{Description}}</p>
+                <a href="#" class="btn btn-primary">{{add to cart}}</a>
+            </div>
+        </div>
+
+        <div class="container card py-4 my-4 bg-dark px-4" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{Card title}}</h5>
+                <p class="card-text">{{Description}}</p>
+                <a href="#" class="btn btn-primary">{{add to cart}}</a>
             </div>
         </div>
     </div>
+
     <!-- End of Vue Template -->
 
     <!--Footer-->
-    <div class="bg-info">
+    <div class="bg-dark">
         <footer class="container py-5">
             <div class="row">
                 <div class="col-2">
@@ -215,4 +240,5 @@
     <script src="./src/index.js"></script>
 </body>
 <!-- Body -->
+
 </html>
