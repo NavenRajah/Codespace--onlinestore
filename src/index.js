@@ -5,10 +5,10 @@ data: {
     Myproduct: [
       {
         id:'Jackets',
-        name:'Lad Jacket',
+        name:'Black Jacket',
         description:'Dark and cosy winter warmer',
         price:'R700.00',
-        imgpath:'image/heroimages/2.png',
+        imgpath:'./images/productimages/BlackJacket.jpg',
       },
       {
         id:'Winter Shrits',
