@@ -10,7 +10,7 @@
 
  #gallery img {
     width: 100% !important;
-    height: auto !important;
+    height: 50% !important;
     margin-bottom:20px; /* to match column gap */
  }
 
@@ -49,5 +49,5 @@
  #gallery img:hover {
     filter:color();
     transform: scale(2);
-    
+    height: fit-content;
  }
