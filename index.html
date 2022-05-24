@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="./src/stylesheets/stylesheet.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+        integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous" />
 
 
     <!-- Bootstrap CDB -->
@@ -29,26 +31,26 @@
 
 <body>
     <div id="Productapp">
-        <nav class="navbar navbar-expand-lg navbar-info bg-dark text">
+        <nav class="navbar navbar-expand-lg navbar-info bg-dark text-light fw-bold">
             <div class="container-fluid">
                 <img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150"
-                    height="75">
+                    height="100">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item flow-right-nav text">
+                        <li class="nav-item flow-right-nav text-light">
                             <!-- <a class="nav-link active" aria-current="page" href="./index.html">Home</a> -->
-                            <a class="nav-link active text-dark" aria-current="page"
+                            <a class="nav-link active text-light" aria-current="page"
                                 href="./src/pages/about.html">About</a>
-                            <a class="nav-link active text" aria-current="page"
+                            <a class="nav-link active text-light" aria-current="page"
                                 href="./src/pages/gallery.html">Gallery</a>
-                            <a class="nav-link active text" aria-current="page" href="./src/pages/shop.html">Shop</a>
-                            <a class="nav-link active text" aria-current="page"
+                            <a class="nav-link active text-light" aria-current="page" href="./src/pages/shop.html">Shop</a>
+                            <a class="nav-link active text-light" aria-current="page"
                                 href="./src/pages/contact.html">Contact</a>
-                            <a class="nav-link active text" aria-current="page" href="./src/pages/cart.html">Cart</a>
+                            <a class="nav-link active text-light" aria-current="page" href="./src/pages/cart.html">Cart</a>
                             <button>
                                 Cart <span id="cartLength"></span>
                             </button>
@@ -58,11 +60,21 @@
                             <a class="nav-link" href="#">Link</a>
                         </li> -->
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-dark btn-lg px-4 me-sm-3 fw-bold" type="submit">Search</button>
-                    </form>
+                    <div class="nav__cart text-light">
+                        <button @click="showCart = !showCart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <span class="total-quantity">{{ totalQuantity }}</span>
+                        <div v-if="showCart" class="cart-dropdown">
+                            <ul class="cart-dropdown__list">
+                                <li v-for="product in cart" :key="product.id">
+                                    {{ product.name }} ({{ product.quantity }})
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </nav>
 
         <!--Hero Section -->
@@ -175,8 +187,8 @@
                     </div>
                     <div class="col-3 offset-0">
                         <ul class="">
-                            <img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="300"
-                            height="250">
+                            <img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo"
+                                width="300" height="250">
                         </ul>
                     </div>
 
@@ -198,13 +210,16 @@
                 <div class="d-flex justify-content-between py-4 my-4 border-top text-light">
                     <p>&copy; 2021 Clothing Wharehouse, Inc. All rights reserved.</p>
                     <ul class="list-unstyled d-flex">
-                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24" height="24">
+                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24"
+                                    height="24">
                                     <use xlink:href="#twitter" />
                                 </svg></a></li>
-                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24" height="24">
+                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24"
+                                    height="24">
                                     <use xlink:href="#instagram" />
                                 </svg></a></li>
-                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24" height="24">
+                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24"
+                                    height="24">
                                     <use xlink:href="#facebook" />
                                 </svg></a></li>
                     </ul>
