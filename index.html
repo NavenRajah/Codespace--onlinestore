@@ -141,7 +141,7 @@
         </div>
 
         <!-- Start of Vue Template -->
-        <div class="row">
+        <div class="row py-4 my-4">
 
             <div class="py-5 px-4">
                 <h1 class="container display-5 fw-bold text-dark text-center">Trending Now</h1>
@@ -149,7 +149,7 @@
             </div>
 
             <div v-for="Product in Myproduct" class="container card py-4 my-4 px-4 bg-dark" style="width: 18rem;">
-                <img src="./src/images/ProductImages/Black Jacket.jpg" class="card-img-top" alt="...">
+                <img :src="img" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-light">{{Product.name}}</h5>
                     <p class="card-text text-light">{{Product.description}}</p>

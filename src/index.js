@@ -8,7 +8,7 @@ data: {
         name:'Black Jacket',
         description:'Dark and cosy winter warmer',
         price:'R700.00',
-        imgpath:'./images/productimages/BlackJacket.jpg',
+        img:'image/blackjacket.jpg',
       },
       {
         id:'Winter Shrits',
