@@ -31,9 +31,9 @@
 
 <body>
     <div id="Productapp">
-        <nav class="navbar navbar-expand-lg navbar-info bg-dark text-light fw-bold">
+        <nav class="navbar navbar-expand-lg navbar-expand-sm sticky-top navbar-info bg-dark text-light fw-bold">
             <div class="container-fluid">
-                <img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150"
+                <a href="index.html"></a><img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150"
                     height="100">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,10 +47,12 @@
                                 href="./src/pages/about.html">About</a>
                             <a class="nav-link active text-light" aria-current="page"
                                 href="./src/pages/gallery.html">Gallery</a>
-                            <a class="nav-link active text-light" aria-current="page" href="./src/pages/shop.html">Shop</a>
+                            <a class="nav-link active text-light" aria-current="page"
+                                href="./src/pages/shop.html">Shop</a>
                             <a class="nav-link active text-light" aria-current="page"
                                 href="./src/pages/contact.html">Contact</a>
-                            <a class="nav-link active text-light" aria-current="page" href="./src/pages/cart.html">Cart</a>
+                            <a class="nav-link active text-light" aria-current="page"
+                                href="./src/pages/cart.html">Cart</a>
                             <button>
                                 Cart <span id="cartLength"></span>
                             </button>
@@ -161,6 +163,12 @@
 
         <!-- End of Vue Template -->
 
+        <!-- Scroll to top button -->
+        <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+
         <!--Footer-->
         <div class="bg-dark text-light">
             <footer class="container py-5">
@@ -230,6 +238,7 @@
         </div>
     </div>
     <script src="./src/index.js"></script>
+    <script src="./src/js/btn.js"></script>
 </body>
 <!-- Body -->
 

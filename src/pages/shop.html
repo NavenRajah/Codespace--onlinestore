@@ -29,9 +29,9 @@
 
 <body>
     <div id="Productapp">
-        <nav class="navbar navbar-expand-lg navbar-info bg-dark text-light fw-bold">
+        <nav class="navbar navbar-expand-lg navbar-expand-sm sticky-top navbar-info bg-dark text-light fw-bold">
             <div class="container-fluid">
-                <img src="../images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150"
+                <a href="index.html"></a><img src="../images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150"
                     height="100">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,17 +73,15 @@
         </nav>
 
         <!-- Jumbotron -->
-<div
-class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-style="background-image: url('../images/ProductImages/Green\ Polo.jpg');"
->
-<h1 class="mb-3 h1 fw-bold display-5 text-dark">Shop Now</h1>
+        <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+            style="background-image: url('../images/ProductImages/Green\ Polo.jpg');">
+            <h1 class="mb-3 h1 fw-bold display-5 text-dark">Shop Now</h1>
 
-<p class="text-dark fw-bold">
-View our seasonal winter range.
-</p>
-</div>
-<!-- Jumbotron -->
+            <p class="text-dark fw-bold">
+                View our seasonal winter range.
+            </p>
+        </div>
+        <!-- Jumbotron -->
         <main>
             <div class="row">
 
@@ -97,8 +95,13 @@ View our seasonal winter range.
                     </div>
                 </div>
             </div>
-
         </main>
+
+        <!-- Scroll to top button -->
+        <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
         <!--Footer-->
         <div class="bg-dark text-light">
             <footer class="container py-5">
@@ -168,6 +171,8 @@ View our seasonal winter range.
         </div>
     </div>
     <script src="../index.js"></script>
+    <script src="../js/btn.js"></script>
+
 </body>
 
 </html
