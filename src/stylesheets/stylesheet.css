@@ -33,6 +33,10 @@
   color: antiquewhite;
 }
 
+.bg{
+  background-repeat: initial;
+}
+
 /*----------------------------------------
   Shop Styles
 ----------------------------------------*/
