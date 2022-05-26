@@ -48,3 +48,56 @@
   Cart Styles
 ----------------------------------------*/
 
+/*----------------------------------------
+  Contact Styles
+----------------------------------------*/
+ .contact-form {
+  background: #FFFFFF;
+  width: 1000px;
+  height: 350px;
+  margin: 0% 0% 15% 10%;
+  position: relative;
+} 
+.contact-form .map {
+  width: 45%;
+  float: left;
+}
+.contact-form .contact {
+  width: 53%;
+  margin-left: 2%;
+  float: left;
+}
+.contact-form .contact .title {
+  font-size: 2.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #242424;
+  margin: 5% 8%;
+}
+.contact-form .contact .subtitle {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 4% 5% 8%;
+}
+.contact-form .contact input,
+.contact-form .contact textarea {
+  width: 500px;
+  padding: 1%;
+  margin: 2% 8%;
+  color: #242424;
+  border: 1px solid #B7B7B7;
+}
+.contact-form .contact input::placeholder,
+.contact-form .contact textarea::placeholder {
+  color: #242424;
+}
+.contact-form .contact .btn-send {
+  background: rgb(58, 57, 57);
+  width: 180px;
+  height: 60px;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin: 2% 8%;
+  border: none;
+}
+
