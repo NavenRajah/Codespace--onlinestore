@@ -101,36 +101,36 @@ const ProductApp = new Vue({
       },
     ],
   },
-  showCart: false
+  showCart: false,
+},
 
-//   computed: {
-//   cart(); {
-//     return this.products.filter(product => product.quantity > 0);
-//   }
-//   totalQuantity(); {
-//     return this.products.reduce(
-//       (total, product) => total + product.quantity,
-//       0
-//     );
-//   }
-// },
+  computed, {
+  cart() {},
+    return: this.Myproduct.filter(Myproduct => Myproduct.quantity > 0),
+  },
+  totalQuantity() ,{
+    return: this.Myproduct.reduce(
+      (total, Myproduct) => total + Myproduct.quantity,
+      0
+    ),
+  },
 
-// methods: {
-//   updateCart(product, updateType) {
-//     for (let i = 0; i < this.products.length; i++) {
-//       if (this.products[i].id === product.id) {
-//         if (updateType === 'subtract') {
-//           if (this.products[i].quantity !== 0) {
-//             this.products[i].quantity--;
-//           }
-//         } else {
-//           this.products[i].quantity++;
-//         }
+methods, {
+  updateCart(Myproduct, updateType) {
+    for (let i = 0; i < this.Myproduct.length; i++) {
+      if (this.Myproduct[i].id === Myproduct.id) {
+        if (updateType === 'subtract') {
+          if (this.Myproduct[i].quantity !== 0) {
+            this.Myproduct[i].quantity--;
+          }
+        } else {
+          this.Myproduct[i].quantity++;
+        }
 
-//         break;
-//       }
-//     }
-//   }
-// }
-});
-
+        break;
+      }
+    }
+  },
+},
+// });
+)
