@@ -33,8 +33,8 @@
     <div id="ProductApp">
         <nav class="navbar navbar-expand-lg navbar-expand-sm sticky-top navbar-info bg-dark text-light fw-bold">
             <div class="container-fluid">
-                <a href="index.html/"><img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo" width="150"
-                    height="100"></a>
+                <a href="index.html/"><img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png"
+                        alt="Logo" width="150" height="100"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -158,7 +158,7 @@
                     <p class="card-text text-light">{{Product.price}}</p>
                     <button class="cart_button" @click="updateCart(product, 'subtract')">-</button>
                     <!-- <span class="cart__quantity">{{ product.quantity }}</span>Serving an error - white screen -->
-                    <button class="cart__button"@click="updateCart(product, 'add')">+</button>
+                    <button class="cart__button" @click="updateCart(product, 'add')">+</button>
                 </div>
             </div>
         </div>
@@ -172,19 +172,9 @@
 
 
         <!--Footer-->
-        <div class="bg-dark text-light">
-            <footer class="container py-5">
-                <div class="row">
-                    <div class="col-1">
-                        <h5>Menu</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shop</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Gallery</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
-                        </ul>
-                    </div>
+        <div>
+            <footer class="py-2 my-0 bg-dark text-light">
+                <div class="container row">
 
                     <div class="col-2">
                         <h5>Policies</h5>
@@ -195,15 +185,16 @@
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">POPI</a></li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div class="col-2">
                         <ul class="">
-                            <a href="index.html"><img src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo"
-                                width="300" height="250"></a>
+                            <a href="index.html"><img
+                                    src="./src/images/Logo/Clothing_Warehouse_logo-removebg-preview.png" alt="Logo"
+                                    width="300" height="250"></a>
                         </ul>
                     </div>
 
 
-                    <div class="col-4 offset-1 text-light">
+                    <div class="col-4 offset-4 text-light">
                         <form>
                             <h5 class="text-light">Subscribe to our newsletter</h5>
                             <p>Monthly digest of whats new and exciting from us.</p>
@@ -217,30 +208,25 @@
                     </div>
                 </div>
 
-                <div class="d-flex justify-content-between py-4 my-4 border-top text-light">
+                <div class="d-flex justify-content-between py-2 my-0 border-top text-light">
                     <p>&copy; 2021 Clothing Wharehouse, Inc. All rights reserved.</p>
-                    <ul class="list-unstyled d-flex">
-                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24"
-                                    height="24">
-                                    <use xlink:href="#twitter" />
-                                </svg></a></li>
-                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24"
-                                    height="24">
-                                    <use xlink:href="#instagram" />
-                                </svg></a></li>
-                        <li class="ms-3 text-light"><a class="link-light text-light" href="#"><svg class="bi" width="24"
-                                    height="24">
-                                    <use xlink:href="#facebook" />
-                                </svg></a></li>
-                    </ul>
+                    <a class="link-light" href="#"><i class="fa-brands fa-twitter" width="10px" height="10px"></i>
+
+                    </a>
+                    <a class="link-light" href="#"><i class="fa-brands fa-instagram" width="20" height="20">
+
+                    </a>
+                    <a class="link-light" href="#"><i class="fa-brands fa-facebook-f" width="20" height="20">
+
+                    </a>
                 </div>
 
             </footer>
             <!-- your content here... -->
         </div>
+        <script src="./src/index.js"></script>
+        <script src="./src/js/btn.js"></script>
     </div>
-    <script src="./src/index.js"></script>
-    <script src="./src/js/btn.js"></script>
 </body>
 <!-- Body -->
 
