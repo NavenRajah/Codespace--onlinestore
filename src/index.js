@@ -1,6 +1,6 @@
 const ProductApp = new Vue({
 
-el: '#Productapp',
+el: '#ProductApp',
 data: {
     Myproduct: [
       {
@@ -9,13 +9,15 @@ data: {
         description:'Dark and cosy winter warmer',
         price:'R700.00',
         img:'image/blackjacket.jpg',
+        quantity: '0',
       },
       {
         id:'Winter Shrits',
         name:'Green Winter Polo',
         description:'Perfect winter woven polo top',
         price:'R950.00',
-        imgpath:'image/heroimages/1.png'
+        imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Jackets',
@@ -23,6 +25,7 @@ data: {
         description:'Leather Jacket for all occasions',
         price:'R7000.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Winter Shirts',
@@ -30,6 +33,7 @@ data: {
         description:'Winter shirt with buttons',
         price:'R620.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Jackets',
@@ -37,6 +41,7 @@ data: {
         description:'Green Jacket with inside pockets',
         price:'R1700.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Jeans',
@@ -44,6 +49,7 @@ data: {
         description:'Denim Jeans with rips on knee',
         price:'R1200.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Jeans',
@@ -51,13 +57,15 @@ data: {
         description:'Mens Black Slim Jeans with pockets',
         price:'R2700.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Jackets',
         name:'BLue Jersy',
         description:'Blue Jearsy with buttons and inside pockets',
         price:'R300.00',
-        imgpath:'image/heroimages/1.png'
+        imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Shirts',
@@ -65,6 +73,7 @@ data: {
         description:'White forml shirt with buttons and silk touch',
         price:'R800.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Jackets',
@@ -72,6 +81,7 @@ data: {
         description:'Brown winter Warmer with padding',
         price:'R700.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Shirts',
@@ -79,6 +89,7 @@ data: {
         description:'Round Neck pull over shirt with top pocket',
         price:'R250.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
       {
         id:'Shirts',
@@ -86,8 +97,41 @@ data: {
         description:'Black v neck tee shirt, short sleeve',
         price:'R200.00',
         imgpath:'image/heroimages/1.png',
+        quantity: '0',
       },
     ],
   },
-  })
+  showCart: false
+};
+  
+   computed: {
+    cart() {
+      return this.products.filter(product => product.quantity > 0);
+    },
+    totalQuantity() {
+      return this.products.reduce(
+        (total, product) => total + product.quantity,
+        0
+      );
+    }
+  },
+    
+    methods: {
+      updateCart(product, updateType) {      
+        for (let i = 0; i < this.products.length; i++) {
+          if (this.products[i].id === product.id) {
+            if (updateType === 'subtract') {
+              if (this.products[i].quantity !== 0) {
+                this.products[i].quantity--;
+              }
+            } else {
+              this.products[i].quantity++;
+            }
+            
+            break;
+          }
+        }
+      }
+    }
+  });
 
