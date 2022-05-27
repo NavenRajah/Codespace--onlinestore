@@ -156,9 +156,8 @@
                     <h5 class="card-title text-light">{{Product.name}}</h5>
                     <p class="card-text text-light">{{Product.description}}</p>
                     <p class="card-text text-light">{{Product.price}}</p>
-                    <!-- <button class="btn btn-primary text-light">Add to Cart</button> -->
                     <button class="cart_button" @click="updateCart(product, 'subtract')">-</button>
-                    <!-- <span class="cart__quantity">{{ product.quantity }}</span> -->
+                    <!-- <span class="cart__quantity">{{ product.quantity }}</span>Serving an error - white screen -->
                     <button class="cart__button"@click="updateCart(product, 'add')">+</button>
                 </div>
             </div>
