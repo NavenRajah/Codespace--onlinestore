@@ -102,12 +102,15 @@ const ProductApp = new Vue({
       },
     ],
   },
-showCart(Myproduct){
-},
+
+showCart(Myproduct){},
 
   methods:{
     additemToCart (Myproduct) {
-      this.cart.push(Myproduct);
+      this.cart.push(Myproduct)
+    },
+    upDateCart (Myproduct){
+      this.cart.update(Myproduct, value, any)
     }
   }
 })
