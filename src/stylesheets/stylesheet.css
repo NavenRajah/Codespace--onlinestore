@@ -132,20 +132,7 @@
   padding: 2.5rem;
   }
   
-  .header {
-    font-size: 2.5rem;
-  }
-  
-  .cart {
-    position: relative;
-  }
 
-    button {
-      background: none;
-      border: 0;
-      color: white;
-      cursor: pointer;
-    }
     
     i {
       font-size: 2rem;

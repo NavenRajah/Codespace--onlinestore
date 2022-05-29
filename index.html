@@ -51,30 +51,11 @@
                                 href="./src/pages/shop.html">Shop</a>
                             <a class="nav-link active text-light" aria-current="page"
                                 href="./src/pages/contact.html">Contact</a>
-                            <a class="nav-link active text-light" aria-current="page"
-                                href="./src/pages/cart.html">Cart</a>
-                            <button>
-                                Cart <span id="cartLength"></span>
-                            </button>
-                            </a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li> -->
+                        <li>
+                            <button v-for="Product in Myproduct" class=" btn-outline-light">{{ cart.length }}</button>
+                        </li>
                     </ul>
-                    <div class="nav__cart text-light">
-                        <button @click="showCart = !showCart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                        <span class="total-quantity">{{ totalQuantity }}</span>
-                        <div v-if="showCart" class="cart-dropdown">
-                            <ul class="cart-dropdown__list">
-                                <li v-for="product in cart" :key="product.id">
-                                    {{ product.name }} ({{ product.quantity }})
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -156,9 +137,7 @@
                     <h5 class="card-title text-light">{{Product.name}}</h5>
                     <p class="card-text text-light">{{Product.description}}</p>
                     <p class="card-text text-light">{{Product.price}}</p>
-                    <button class="cart_button" @click="updateCart(product, 'subtract')">-</button>
-                    <!-- <span class="cart__quantity">{{ product.quantity }}</span>Serving an error - white screen -->
-                    <button class="cart__button" @click="updateCart(product, 'add')">+</button>
+                    <button class="cart_button btn-primary" v-on:click="addItemToCart">Add to Cart</button>
                 </div>
             </div>
         </div>

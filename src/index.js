@@ -2,13 +2,14 @@ const ProductApp = new Vue({
 
   el: '#ProductApp',
   data: {
+    cart:{},
     Myproduct: [
       {
         id: 'Jackets',
         name: 'Black Jacket',
         description: 'Dark and cosy winter warmer',
         price: 'R700.00',
-        img: 'image/blackjacket.jpg',
+        img:'https://drive.google.com/file/d/1X5NRHnKq2_fpFFMQnWjztzKR8E9L2JgL/view?usp=sharing',
         quantity: '0',
       },
       {
@@ -101,36 +102,12 @@ const ProductApp = new Vue({
       },
     ],
   },
-  showCart: false,
+showCart(Myproduct){
 },
 
-  computed, {
-  cart() {},
-    return: this.Myproduct.filter(Myproduct => Myproduct.quantity > 0),
-  },
-  totalQuantity() ,{
-    return: this.Myproduct.reduce(
-      (total, Myproduct) => total + Myproduct.quantity,
-      0
-    ),
-  },
-
-methods, {
-  updateCart(Myproduct, updateType) {
-    for (let i = 0; i < this.Myproduct.length; i++) {
-      if (this.Myproduct[i].id === Myproduct.id) {
-        if (updateType === 'subtract') {
-          if (this.Myproduct[i].quantity !== 0) {
-            this.Myproduct[i].quantity--;
-          }
-        } else {
-          this.Myproduct[i].quantity++;
-        }
-
-        break;
-      }
+  methods:{
+    additemToCart (Myproduct) {
+      this.cart.push(Myproduct);
     }
-  },
-},
-
-)
+  }
+})
