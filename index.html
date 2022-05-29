@@ -55,7 +55,7 @@
                     </ul>
                 </div>
                 <div>
-                    <button class="btn-primary">{{ cart.length }}</button>
+                    <button class="btn btn-primary">{{ cart.length }}</button>
                 </div>
             </div>
         </nav>
@@ -137,15 +137,16 @@
                     <h5 class="card-title text-light">{{Product.name}}</h5>
                     <p class="card-text text-light">{{Product.description}}</p>
                     <p class="card-text text-light">{{Product.price}}</p>
-                    <button class="cart_button btn-primary" v-on:click="addItemToCart">Add to Cart</button>
+                    <button class="btn-hover btn cart_button btn-primary" v-on:click="addItemToCart">Add to
+                        Cart</button>
                 </div>
             </div>
         </div>
 
         <!-- End of Vue Template -->
 
-        <!-- Scroll to top button -->
-        <button type="button" class="btn btn-dark btn-floating btn-lg" id="btn-back-to-top">
+        <!-- Back to top button -->
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
             <i class="fas fa-arrow-up"></i>
         </button>
 
@@ -181,7 +182,7 @@
                                 <label for="newsletter1" class="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
                                 <button class="btn btn-outline-light btn-lg px-4 me-sm-3 fw-bold text-light"
-                                    type="button">Subscribe</button>
+                                    type="btn-hover button">Subscribe</button>
                             </div>
                         </form>
                     </div>
