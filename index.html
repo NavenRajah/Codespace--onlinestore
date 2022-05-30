@@ -55,12 +55,34 @@
                     </ul>
                 </div>
                 <div id="cart">
-                    <button>Cart :</button>
+                    <button class="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Cart :</button>
                     <span id="cart-items-no">{{cartLength}}</span>
                 </div>
             </div>
         </nav>
 
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div v-for="items in cart" class="modal-body">
+
+                        <h5 class="card-title text-dark">name</h5>
+                        <p class="card-text text-dark">price</p>
+                        <button type="button" v-on:click="Remove(Myproduct)">X</button>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">proceed to checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--Hero Section -->
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -111,13 +133,17 @@
             <div class="py-5">
                 <h1 class="display-5 fw-bold text-light">About Clothng Warehouse</h1>
                 <div class="col-lg-6 mx-auto">
-                    <p class="fs-5 mb-4">Based In the heart of KZN, we offer a range of high-end fashion at affordable
-                        prices. What began as a bootsale is now a registered and reputable online clothing store that
-                        delivers to all major areas in South Africa. With over 50 employees we ensure speedy delivery
+                    <p class="fs-5 mb-4">Based In the heart of KZN, we offer a range of high-end fashion at
+                        affordable
+                        prices. What began as a bootsale is now a registered and reputable online clothing store
+                        that
+                        delivers to all major areas in South Africa. With over 50 employees we ensure speedy
+                        delivery
                         and great customer service.
                     </p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Shop Now</button>
+                        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Shop
+                            Now</button>
                         <button type="button" class="btn btn-outline-info btn-lg px-4">View Trends</button>
                     </div>
                 </div>
@@ -133,8 +159,8 @@
             </div>
 
             <div v-for="Product in Myproduct" class="container card py-4 my-4 px-4 bg-dark" style="width: 18rem;">
-                
-                <img  v-bind:src=" './src/images/ProductImages/' + Product.imgpath"  alt="preview">
+
+                <img v-bind:src=" './src/images/ProductImages/' + Product.imgpath" alt="preview">
                 <div class="card-body cart">
                     <h5 class="card-title text-light">{{Product.name}}</h5>
                     <p class="card-text text-light">{{Product.description}}</p>
@@ -161,8 +187,10 @@
                     <div class="col-2">
                         <h5>Policies</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Return Policy</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Online Policy</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Return Policy</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Online Policy</a>
+                            </li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">PAIA</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">POPI</a></li>
                         </ul>
