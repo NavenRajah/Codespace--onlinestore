@@ -54,8 +54,9 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <button class="btn btn-primary">{{ cart.length }}</button>
+                <div id="cart">
+                    <button>Cart :</button>
+                    <span id="cart-items-no">{{cartLength}}</span>
                 </div>
             </div>
         </nav>
@@ -132,12 +133,12 @@
             </div>
 
             <div v-for="Product in Myproduct" class="container card py-4 my-4 px-4 bg-dark" style="width: 18rem;">
-                <img :src="img" class="card-img-top" alt="...">
+                <img class="imgpath" alt="preview">
                 <div class="card-body cart">
                     <h5 class="card-title text-light">{{Product.name}}</h5>
                     <p class="card-text text-light">{{Product.description}}</p>
                     <p class="card-text text-light">{{Product.price}}</p>
-                    <button class="btn-hover btn cart_button btn-primary" v-on:click="addItemToCart">Add to
+                    <button class="btn-hover btn cart_button btn-primary" v-on:click="purchase(Myproduct)">Add to
                         Cart</button>
                 </div>
             </div>
@@ -204,9 +205,10 @@
             </footer>
             <!-- your content here... -->
         </div>
-        <script src="./src/index.js"></script>
-        <script src="./src/js/btn.js"></script>
     </div>
+    <script src="./src/index.js"></script>
+    <script src="./src/js/btn.js"></script>
+
 </body>
 <!-- Body -->
 

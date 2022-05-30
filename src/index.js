@@ -2,14 +2,16 @@ const ProductApp = new Vue({
 
   el: '#ProductApp',
   data: {
-    cart:{},
+    cart : {
+      contents : []
+  },
     Myproduct: [
       {
         id: 'Jackets',
         name: 'Black Jacket',
         description: 'Dark and cosy winter warmer',
         price: 'R700.00',
-        img:'https://drive.google.com/file/d/1X5NRHnKq2_fpFFMQnWjztzKR8E9L2JgL/view?usp=sharing',
+        imgpath:'blackJacket.jpg',
         quantity: '0',
       },
       {
@@ -103,14 +105,36 @@ const ProductApp = new Vue({
     ],
   },
 
-showCart(Myproduct){},
+  methods : {
 
-  methods:{
-    additemToCart (Myproduct) {
-      this.cart.push(Myproduct)
-    },
-    upDateCart (Myproduct){
-      this.cart.update(Myproduct, value, any)
+    // Is called when user clicks on purchase button
+    purchase(item) {
+
+        let purchaseItem = JSON.stringify(item);
+        console.log(purchaseItem)
+        
+        this.cart.contents.push(purchaseItem);
+
+        localStorage.setItem("store-cart-items", this.cart.contents)
+
+        //.log(this.cart.contents.length)
     }
-  }
-})
+ },
+ computed : {
+     cartLength : function() {
+         return this.cart.contents.length
+     }
+ }
+
+});
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+if (localStorage.getItem("store-cart-items")) {
+
+    ProductApp.cart.contents = localStorage.getItem("store-cart-items")
+}
+
+
+});
