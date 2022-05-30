@@ -11,7 +11,7 @@ const ProductApp = new Vue({
         name: 'Black Jacket',
         description: 'Dark and cosy winter warmer',
         price: 'R700.00',
-        imgpath:'blackJacket.jpg',
+        imgpath:'Black Jacket.jpg',
         quantity: '0',
       },
       {
@@ -19,7 +19,7 @@ const ProductApp = new Vue({
         name: 'Green Winter Polo',
         description: 'Perfect winter woven polo top',
         price: 'R950.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Green Polo.jpg',
         quantity: '0',
       },
       {
@@ -27,7 +27,7 @@ const ProductApp = new Vue({
         name: 'Leather Jacket',
         description: 'Leather Jacket for all occasions',
         price: 'R7000.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Black Leather Jacket.png',
         quantity: '0',
       },
       {
@@ -35,7 +35,7 @@ const ProductApp = new Vue({
         name: 'White Winter Shirt',
         description: 'Winter shirt with buttons',
         price: 'R620.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'White V neck.jpg',
         quantity: '0',
       },
       {
@@ -43,7 +43,7 @@ const ProductApp = new Vue({
         name: 'Green Jacket',
         description: 'Green Jacket with inside pockets',
         price: 'R1700.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'green jacket.jpg',
         quantity: '0',
       },
       {
@@ -51,7 +51,7 @@ const ProductApp = new Vue({
         name: 'Denim Jeans',
         description: 'Denim Jeans with rips on knee',
         price: 'R1200.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Blue Jeans.jpg',
         quantity: '0',
       },
       {
@@ -59,7 +59,7 @@ const ProductApp = new Vue({
         name: 'Black Jeans',
         description: 'Mens Black Slim Jeans with pockets',
         price: 'R2700.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Black Jeans.jpg',
         quantity: '0',
       },
       {
@@ -67,7 +67,7 @@ const ProductApp = new Vue({
         name: 'BLue Jersy',
         description: 'Blue Jearsy with buttons and inside pockets',
         price: 'R300.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Blue Jersey.jpg',
         quantity: '0',
       },
       {
@@ -75,7 +75,7 @@ const ProductApp = new Vue({
         name: 'White Formal Shirt',
         description: 'White forml shirt with buttons and silk touch',
         price: 'R800.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'White Formal.jpg',
         quantity: '0',
       },
       {
@@ -83,7 +83,7 @@ const ProductApp = new Vue({
         name: 'Brown Winter Jacket',
         description: 'Brown winter Warmer with padding',
         price: 'R700.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Brown Jacket.jpeg',
         quantity: '0',
       },
       {
@@ -91,7 +91,7 @@ const ProductApp = new Vue({
         name: 'Round Neck',
         description: 'Round Neck pull over shirt with top pocket',
         price: 'R250.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Round Neck.jpg',
         quantity: '0',
       },
       {
@@ -99,7 +99,7 @@ const ProductApp = new Vue({
         name: 'Black V Neck',
         description: 'Black v neck tee shirt, short sleeve',
         price: 'R200.00',
-        imgpath: 'image/heroimages/1.png',
+        imgpath: 'Black V Neck.jpg',
         quantity: '0',
       },
     ],
