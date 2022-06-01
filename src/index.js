@@ -113,12 +113,16 @@ const ProductApp = new Vue({
         let purchaseItem = JSON.stringify(item);
         console.log(purchaseItem)
         
-        this.cart.contents.push(purchaseItem);
+        this.cart.product.push(purchaseItem);
 
         localStorage.setItem("store-cart-items", this.cart.contents)
 
         //.log(this.cart.contents.length)
     }
+ },
+
+ upDatCart(){
+  this.cart.product.push(upDateCart);
  },
  computed : {
      cartLength : function() {

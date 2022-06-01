@@ -55,7 +55,7 @@
                     </ul>
                 </div>
                 <div id="cart">
-                    <button class="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Cart :</button>
+                    <button class="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Cart</button>
                     <span id="cart-items-no">{{cartLength}}</span>
                 </div>
             </div>
@@ -70,10 +70,11 @@
                         <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div v-for="items in cart" class="modal-body">
+                    <div v-for="product in cart" class="modal-body">
 
-                        <h5 class="card-title text-dark">name</h5>
-                        <p class="card-text text-dark">price</p>
+                        <h5 class="card-title text-dark">{{ product.name }}</h5>
+                        <p class="card-text text-dark">{{ product.price}}</p>
+                        <p class="card-text text-dark">{{ product.quantity}}</p>
                         <button type="button" v-on:click="Remove(Myproduct)">X</button>
 
                         <div class="modal-footer">
@@ -165,7 +166,7 @@
                     <h5 class="card-title text-light">{{Product.name}}</h5>
                     <p class="card-text text-light">{{Product.description}}</p>
                     <p class="card-text text-light">{{Product.price}}</p>
-                    <button class="btn-hover btn cart_button btn-primary" v-on:click="purchase(Myproduct)">Add to
+                    <button class="btn-hover btn cart_button btn-primary" v-on:click="purchase(Myproduct) + UpdateCart">Add to
                         Cart</button>
                 </div>
             </div>
