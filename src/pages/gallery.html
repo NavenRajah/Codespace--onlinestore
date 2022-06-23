@@ -10,8 +10,12 @@
 
     <title>Gallery - Clothing Wharehouse</title>
 
-    <link rel="stylesheet" href="../stylesheets/gallery.css">
     <link rel="stylesheet" href="../stylesheets/stylesheet.css">
+    <!-- <link rel="stylesheet" href="../stylesheets/stylesheet.css"> -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../stylesheets/gallery.css">
+    </noscript>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
         integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous" />
@@ -46,16 +50,13 @@
                             <a class="nav-link active text-light" aria-current="page" href="./gallery.html">Gallery</a>
                             <a class="nav-link active text-light" aria-current="page" href="./shop.html">Shop</a>
                             <a class="nav-link active text-light" aria-current="page" href="./contact.html">Contact</a>
-                            <!-- <a class="nav-link active text-light" aria-current="page" href="./cart.html">Cart</a>
-                            <button>
-                                Cart <span id="cartLength"></span>
-                            </button>
-                            </a> -->
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li> -->
                     </ul>
+                    <div id="cart">
+                        <button class="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">View
+                            Cart</button>
+                        <span id="cart-items-no">{{cartLength}}</span>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -95,20 +96,35 @@
         </div>
         <!-- Jumbotron -->
 
-        <div class="container my-4 py-4" id="gallery">
+        <div class="row container text-center py-4 my-4">
 
-            <img src="../images/ProductImages/Black Jacket.jpg">
-            <img src="../images/ProductImages/Black Jeans.jpg">
-            <img src="../images/ProductImages/Black Leather Jacket.png">
-            <img src="../images/ProductImages/Black V Neck.jpg">
-            <img src="../images/ProductImages/Blue Jeans.jpg">
-            <img src="../images/ProductImages/Blue Jersey.jpg">
-            <img src="../images/ProductImages/Brown Jacket.jpeg">
-            <img src="../images/ProductImages/green jacket.jpg">
-            <img src="../images/ProductImages/Green Polo.jpg">
-            <img src="../images/ProductImages/Round Neck.jpg">
-            <img src="../images/ProductImages/White Formal.jpg">
-            <img src="../images/ProductImages/White V neck.jpg">
+            <div class="column">
+                <img src="../images/ProductImages/Black Jacket.jpg" height="250px" width="250px">
+                <img src="../images/ProductImages/Black Jeans.jpg" height="250px" width="250px">
+                <img src="../images/ProductImages/Black Leather Jacket.png" height="250px" width="250px">
+            </div>
+
+            <div class="column">
+                <img src="../images/ProductImages/Black V Neck.jpg" height="450px" width="450px">
+                <img src="../images/ProductImages/Blue Jeans.jpg" height="450px" width="450px">
+            </div>
+
+            <div class="column">
+                <img src="../images/ProductImages/Blue Jersey.jpg" height="250px" width="250px">
+                <img src="../images/ProductImages/Brown Jacket.jpeg" height="250px" width="250px">
+                <img src="../images/ProductImages/green jacket.jpg" height="250px" width="250px">
+            </div>
+
+            <div class="column">
+                <img src="../images/ProductImages/Green Polo.jpg" height="450px" width="450px">
+                <img src="../images/ProductImages/Round Neck.jpg" height="450px" width="450px">
+            </div>
+
+            <div class="column">
+                <img src="../images/ProductImages/White Formal.jpg" height="250px" width="250px">
+                <img src="../images/ProductImages/White V neck.jpg" height="250px" width="250px">
+            </div>
+
         </div>
         <!--Footer-->
         <div class="bg-dark text-light">
@@ -177,7 +193,7 @@
             </footer>
         </div>
     </div> <!-- your content here... -->
-
+    <script src="../index.js"></script>
 </body>
 
 </html>
