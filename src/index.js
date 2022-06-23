@@ -114,9 +114,12 @@ const ProductApp = new Vue({
 
         let purchaseItem = product
         
+        // pushing selected item to cart array
         this.cart.push(purchaseItem)
+        // convert js to json
         let jsonCartItems = JSON.stringify(this.cart)
 
+        // save jsonCartData to localStorage
         localStorage.setItem(STORAGE_KEY, jsonCartItems)
 
     },
@@ -127,13 +130,16 @@ const ProductApp = new Vue({
       
         let deleteItem = product
 
+        // filtering and deleting item from cart data
         for (let i = 0; i < this.cartLength; i++) {
-
           if (this.cart[i] === deleteItem) {
             this.cart.splice(i, 1)
           }
-
         } 
+
+        // update storage after deleting
+        let jsonCartItems = JSON.stringify(this.cart)
+        localStorage.setItem(STORAGE_KEY, jsonCartItems)
         
       } else
           return null
@@ -147,6 +153,7 @@ const ProductApp = new Vue({
      }
  },
 
+ // runs every DOM is loaded to ensure we dont overwrite existing data
  mounted() {
   if (localStorage.getItem(STORAGE_KEY) !== null) {
 
