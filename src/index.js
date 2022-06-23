@@ -1,10 +1,12 @@
+
+const STORAGE_KEY = "store-cart-items"
+
+// ---- Vue Instance ---
 const ProductApp = new Vue({
 
   el: '#ProductApp',
   data: {
-    cart : {
-      contents : []
-  },
+    cart : [],
     Myproduct: [
       {
         id: 'Jackets',
@@ -108,31 +110,56 @@ const ProductApp = new Vue({
   methods : {
 
     // Is called when user clicks on purchase button
-    purchase(item) {
+    addToCart(product) {
 
-        let purchaseItem = JSON.stringify(item);
-        console.log(purchaseItem)
+        let purchaseItem = product
         
-        this.cart.product.push(purchaseItem);
+        this.cart.push(purchaseItem)
+        let jsonCartItems = JSON.stringify(this.cart)
 
-        localStorage.setItem("store-cart-items", this.cart.contents)
+        localStorage.setItem(STORAGE_KEY, jsonCartItems)
 
-        //.log(this.cart.contents.length)
+    },
+
+    removeFromCart(product) {
+
+      if (product !== null) {
+      
+        let deleteItem = product
+
+        for (let i = 0; i < this.cartLength; i++) {
+
+          if (this.cart[i] === deleteItem) {
+            this.cart.splice(i, 1)
+          }
+
+        } 
+        
+      } else
+          return null
     }
+
  },
 
- upDatCart(){
-  this.cart.product.push(upDateCart);
- },
  computed : {
-     cartLength : function() {
-         return this.cart.contents.length
+     cartLength() {
+         return this.cart.length
      }
+ },
+
+ mounted() {
+  if (localStorage.getItem(STORAGE_KEY) !== null) {
+
+    let jsonCartItems =  localStorage.getItem(STORAGE_KEY)
+
+    this.cart = JSON.parse(jsonCartItems)
+
+  }
  }
 
 });
 
-
+/*
 window.addEventListener('DOMContentLoaded', (event) => {
 
 if (localStorage.getItem("store-cart-items")) {
@@ -142,3 +169,4 @@ if (localStorage.getItem("store-cart-items")) {
 
 
 });
+*/
